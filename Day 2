@@ -1,0 +1,17 @@
+import math
+
+def minimum_cost(N, X):
+    # Calculate the number of subscriptions needed
+    subscriptions_needed = math.ceil(N / 6)
+    
+    # Calculate the total cost
+    total_cost = subscriptions_needed * X
+    
+    return total_cost
+
+# Example usage
+N = int(input("Enter the number of friends: "))
+X = int(input("Enter the cost of one subscription: "))
+
+result = minimum_cost(N, X)
+print(f"Minimum total cost: {result} rupees")

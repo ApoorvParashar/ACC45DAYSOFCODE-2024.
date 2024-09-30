@@ -1,0 +1,4 @@
+x=input("enter a working day till thrusday")
+y=input("enter a friday working hour")
+t=(x*4)
+print(t+y)

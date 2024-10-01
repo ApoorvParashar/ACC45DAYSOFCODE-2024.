@@ -1,0 +1,15 @@
+def can_chef_win(A, B, C, X):
+    if X == A or X == B or X == C:
+        return "Yes"
+    else:
+        return "No"
+
+# Example usage
+A = int(input("Enter topic A: "))
+B = int(input("Enter topic B: "))
+C = int(input("Enter topic C: "))
+X = int(input("Enter topic X (the one Chef got): "))
+
+# Check if Chef can win
+result = can_chef_win(A, B, C, X)
+print(result)

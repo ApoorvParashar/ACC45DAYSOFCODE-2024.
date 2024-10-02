@@ -1,0 +1,8 @@
+B1=input("enter the status of water")
+B2=input("enter status")
+B3=input("enter status")
+if(B1 && B2 ==1)
+ print("fill the bottle")
+else 
+ print (" no need")
+ 

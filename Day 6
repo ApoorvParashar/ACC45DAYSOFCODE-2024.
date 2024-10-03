@@ -1,0 +1,14 @@
+def max_points(X, Y):
+    # Calculate total points for both orders
+    points_order_1 = 1500 - 6 * X - 4 * Y
+    points_order_2 = 1500 - 6 * Y - 2 * X
+    
+    # Return the maximum points
+    return max(points_order_1, points_order_2)
+
+# Input: Time required to solve Problem A (X) and Problem B (Y)
+X = int(input("Enter the time required to solve Problem A (X): "))
+Y = int(input("Enter the time required to solve Problem B (Y): "))
+
+# Calculate and print the maximum points
+print("Maximum points Chef can score:", max_points(X, Y))

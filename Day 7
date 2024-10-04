@@ -1,0 +1,5 @@
+x=input("enter the time starting of assignement")
+if(x>=8):
+print("assignment will not complete")
+else
+print("assignment will be completed")

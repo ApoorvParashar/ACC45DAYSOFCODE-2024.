@@ -1,0 +1,22 @@
+def check_monopoly(P, Q, R, S):
+    # Check for monopoly condition for each company
+    if P > (Q + R + S):
+        return "Company A has a monopoly."
+    elif Q > (P + R + S):
+        return "Company B has a monopoly."
+    elif R > (P + Q + S):
+        return "Company C has a monopoly."
+    elif S > (P + Q + R):
+        return "Company D has a monopoly."
+    else:
+        return "No monopoly in the market."
+
+# Example usage
+P = float(input("Enter the profit of Company A (in lakhs): "))
+Q = float(input("Enter the profit of Company B (in lakhs): "))
+R = float(input("Enter the profit of Company C (in lakhs): "))
+S = float(input("Enter the profit of Company D (in lakhs): "))
+
+# Check for monopoly
+result = check_monopoly(P, Q, R, S)
+print(result)

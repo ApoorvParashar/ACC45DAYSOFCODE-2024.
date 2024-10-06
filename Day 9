@@ -1,0 +1,14 @@
+def max_rental_months(X, Y):
+    # Calculate the maximum number of months Chef can rent
+    if X == 0:
+        return "Renting cost cannot be zero."
+    
+    M = (Y // X) - 1
+    return M
+
+# Example usage
+X = 10  # Cost of renting per month
+Y = 100  # Cost of purchasing
+
+max_months = max_rental_months(X, Y)
+print(f"Chef can rent the cooler for a maximum of {max_months} months.")

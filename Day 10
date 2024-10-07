@@ -1,0 +1,18 @@
+def can_measure_weight(W, X, Y, Z):
+    # Check if any combination of weights can measure the exact weight W
+    possible_weights = {0, X, Y, Z, X+Y, X+Z, Y+Z, X+Y+Z}
+    
+    # If W is in the possible combinations, print "YES", otherwise "NO"
+    if W in possible_weights:
+        return "YES"
+    else:
+        return "NO"
+
+# Input number of test cases
+T = int(input("Enter number of test cases: "))
+
+# Loop over each test case
+for _ in range(T):
+    W, X, Y, Z = map(int, input("Enter W, X, Y, Z: ").split())
+    result = can_measure_weight(W, X, Y, Z)
+    print(result)

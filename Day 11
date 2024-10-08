@@ -1,0 +1,20 @@
+def catch_thief(X, Y):
+    
+    if X == Y:
+        return 0
+    
+    
+    relative_speed = 2 - 1  # Policeman moves 2 units per second, thief moves 1 unit per second
+    distance = abs(X - Y)
+    
+    
+    
+    time = distance // relative_speed
+    return 
+T = int(input("Enter the number of test cases: "))
+
+
+for _ in range(T):
+    X, Y = map(int, input("Enter initial positions of policeman (X) and thief (Y): ").split())
+    result = catch_thief(X, Y)
+    print(result)

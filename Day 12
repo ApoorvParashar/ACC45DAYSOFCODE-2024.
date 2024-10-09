@@ -1,0 +1,10 @@
+def min_operations(N, X):
+    # Calculate the minimum number of operations required
+    return min(X, N - X)
+
+# Example usage:
+N = 10  # Total number of cards
+X = 4   # Number of face-up cards
+
+result = min_operations(N, X)
+print(f"Minimum number of operations required: {result}")

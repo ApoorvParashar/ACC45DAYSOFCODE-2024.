@@ -1,0 +1,7 @@
+X=input("enter a number of problem")
+Y=input("enter a problem solved")
+if(Y<=X/2):
+ print("Munchy is an expert");
+else:
+ print("Munchy is not an expert")
+ 

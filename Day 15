@@ -1,0 +1,17 @@
+import math
+
+def minimum_bags(N, K, M):
+    # Total capacity of one bag
+    capacity_per_bag = K * M
+    
+    # Calculate the minimum number of bags needed
+    min_bags = math.ceil(N / capacity_per_bag)
+    
+    return min_bags
+
+# Example usage
+N = int(input("Enter the number of candies: "))
+K = int(input("Enter the number of pockets in each bag: "))
+M = int(input("Enter the maximum number of candies per pocket: "))
+
+print(f"Minimum number of bags needed: {minimum_bags(N, K, M)}")

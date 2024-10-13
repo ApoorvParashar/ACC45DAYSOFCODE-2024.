@@ -1,0 +1,8 @@
+def calculate_notebooks(N):
+    # 1 kg of pulp makes 1000 pages, and each notebook has 100 pages
+    notebooks = N * 10
+    return notebooks
+
+# Example usage
+N = float(input("Enter the amount of pulp in kg: "))
+print(f"Number of notebooks that can be made: {calculate_notebooks(N)}")

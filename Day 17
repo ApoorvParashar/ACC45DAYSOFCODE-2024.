@@ -1,0 +1,11 @@
+# Input travel times for bike and car
+X = int(input("Enter the time in minutes for the bike: "))
+Y = int(input("Enter the time in minutes for the car: "))
+
+# Compare the times
+if X < Y:
+    print("Traveling with the bike is faster.")
+elif X > Y:
+    print("Traveling with the car is faster.")
+else:
+    print("Both options take the same time.")

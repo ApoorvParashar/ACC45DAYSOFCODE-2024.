@@ -1,0 +1,12 @@
+import math
+
+# Input: Number of teams (N)
+N = int(input("Enter the number of teams (N), which is a power of 2: "))
+
+# Check if N is a power of 2
+if (N & (N - 1)) == 0 and N > 0:
+    # Calculate the number of rounds (log base 2 of N)
+    rounds = int(math.log2(N))
+    print(f"The number of rounds required is: {rounds}")
+else:
+    print("Invalid input! N must be a power of 2.")

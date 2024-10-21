@@ -1,0 +1,21 @@
+from collections import Counter
+
+def can_form_groups(preferences):
+    # Count how many people have each group size preference
+    group_count = Counter(preferences)
+    
+    # For each group size preference, check if it is divisible by the number of people wanting that group size
+    for size, count in group_count.items():
+        if count % size != 0:
+            return False
+    
+    return True
+
+# Example usage:
+N = int(input("Enter the number of people: "))
+preferences = list(map(int, input(f"Enter the preferences for {N} people: ").split()))
+
+if can_form_groups(preferences):
+    print("Yes, Chef can assign groups to make everyone happy.")
+else:
+    print("No, Chef cannot assign groups to make everyone happy.")

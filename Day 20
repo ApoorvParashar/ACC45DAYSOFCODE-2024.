@@ -1,0 +1,8 @@
+a=input("enter a valuation of first investor ")
+b=input("enter a valuation of second investor")
+first=a*10
+second=b*10
+if (first>second):
+    print("FIRST")
+else:
+    print("SECOND")

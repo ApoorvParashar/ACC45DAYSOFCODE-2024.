@@ -1,0 +1,16 @@
+def min_wins_needed(X, Y):
+    # Iterate over the possible number of wins (from 0 to Y)
+    for wins in range(Y + 1):
+        # Calculate the total points if RCB wins 'wins' matches and ties the rest
+        points = wins * 2 + (Y - wins) * 1
+        if points >= X:
+            return wins
+    # In the guaranteed case that RCB qualifies by winning all, return Y if needed
+    return Y
+
+# Example usage:
+X = int(input("Enter the minimum points RCB needs: "))
+Y = int(input("Enter the remaining number of matches: "))
+
+min_wins = min_wins_needed(X, Y)
+print(f"RCB needs to win at least {min_wins} matches to qualify for the playoffs.")

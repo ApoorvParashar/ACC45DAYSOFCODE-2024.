@@ -1,0 +1,14 @@
+def degree_of_polynomial(coefficients):
+    # Traverse the list of coefficients from the highest degree to the lowest
+    for i in range(len(coefficients) - 1, -1, -1):
+        if coefficients[i] != 0:
+            return i
+    # If all coefficients are zero, the degree is undefined, but we can return -1
+    return -1
+
+# Example usage:
+N = int(input("Enter the number of terms in the polynomial: "))
+coefficients = list(map(int, input(f"Enter the {N} coefficients: ").split()))
+
+degree = degree_of_polynomial(coefficients)
+print(f"The degree of the polynomial is: {degree}")

@@ -1,0 +1,36 @@
+class Problem:
+    def __init__(self, id, name, difficulty, tags, attempted):
+        self.id = id
+        self.name = name
+        self.difficulty = difficulty
+        self.tags = tags
+        self.attempted = attempted
+
+class ProblemSet:
+    def __init__(self):
+        self.problems = []
+
+    def add_problem(self, problem):
+        self.problems.append(problem)
+
+    def filter_problems(self, difficulty=None, attempted=None, tags=None):
+        filtered = self.problems
+        
+        # Filter by difficulty
+        if difficulty:
+            filtered = [p for p in filtered if p.difficulty == difficulty]
+        
+        # Filter by attempt status
+        if attempted is not None:
+            filtered = [p for p in filtered if p.attempted == attempted]
+        
+        # Filter by tags
+        if tags:
+            filtered = [p for p in filtered if any(tag in p.tags for tag in tags)]
+        
+        return filtered
+
+    def display_problems(self, problems):
+        if not problems:
+            print("No problems match the selected criteria.")
+          

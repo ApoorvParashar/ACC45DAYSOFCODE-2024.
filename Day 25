@@ -1,0 +1,19 @@
+# Function to calculate maximum possible tastiness
+def max_tastiness(a, b, c, d):
+    # Calculate all possible combinations of tastiness
+    option1 = a + c
+    option2 = a + d
+    option3 = b + c
+    option4 = b + d
+    
+    # Find the maximum tastiness
+    return max(option1, option2, option3, option4)
+
+# Example usage
+a = 3
+b = 5
+c = 4
+d = 6
+
+# Output the result
+print("Maximum possible tastiness:", max_tastiness(a, b, c, d))

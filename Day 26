@@ -1,0 +1,13 @@
+def count_mutated_minions(characteristics, K):
+    count = 0
+    for characteristic in characteristics:
+        if (characteristic + K) % 7 == 0:
+            count += 1
+    return count
+
+# Example usage
+characteristics = [3, 14, 7, 8, 9]  # List of characteristic values of minions
+K = 5  # The value to add to each characteristic
+
+result = count_mutated_minions(characteristics, K)
+print("Number of minions with Wolverine-like mutations:", result)

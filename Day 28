@@ -1,0 +1,13 @@
+import math
+
+def min_steps(A, B, K):
+    distance = abs(B - A)
+    steps = math.ceil(distance / K)
+    return steps
+
+# Example usage
+A = int(input("Enter Chef's position (A): "))
+B = int(input("Enter Chefina's position (B): "))
+K = int(input("Enter the maximum step size (K): "))
+
+print("Minimum steps required:", min_steps(A, B, K))

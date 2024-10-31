@@ -1,0 +1,14 @@
+def server(n):
+    # Calculate which group of 2 serves this serve falls into
+    group = (n + 1) // 2  # Adding 1 before division handles 1-based serve counting.
+    
+    # If group number is odd, it's Alice's serve; if even, it's Bob's serve
+    if group % 2 == 1:
+        return "Alice"
+    else:
+        return "Bob"
+
+# Example usage
+n = int(input("Enter the serve number: "))
+print(f"The server for serve {n} is: {server(n)}")
+

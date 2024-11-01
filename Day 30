@@ -1,0 +1,13 @@
+def can_score_reach(A, B, C, D):
+    if C >= A and D >= B:
+        return "Yes"
+    else:
+        return "No"
+
+# Example usage
+A = int(input("Enter current score of team 1: "))
+B = int(input("Enter current score of team 2: "))
+C = int(input("Enter desired score of team 1: "))
+D = int(input("Enter desired score of team 2: "))
+
+print(can_score_reach(A, B, C, D))

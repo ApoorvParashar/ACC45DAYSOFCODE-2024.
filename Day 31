@@ -1,0 +1,10 @@
+# Function to calculate the number of choices for captain and vice-captain
+def count_choices(N):
+    # Total choices is N * (N - 1)
+    return N * (N - 1)
+
+# Input number of players Chef has narrowed down
+N = int(input("Enter the number of players Chef has chosen from: "))
+
+# Output the result
+print("Total number of choices for captain and vice-captain:", count_choices(N))

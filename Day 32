@@ -1,0 +1,42 @@
+# Function to determine the winner and the maximum lead
+def find_winner_and_max_lead(rounds):
+    cumulative_score_player1 = 0
+    cumulative_score_player2 = 0
+    max_lead = 0
+    winner = 0
+    
+    for score1, score2 in rounds:
+        # Update cumulative scores
+        cumulative_score_player1 += score1
+        cumulative_score_player2 += score2
+        
+        # Calculate the current lead and determine the leader
+        if cumulative_score_player1 > cumulative_score_player2:
+            current_lead = cumulative_score_player1 - cumulative_score_player2
+            leader = 1
+        else:
+            current_lead = cumulative_score_player2 - cumulative_score_player1
+            leader = 2
+        
+        # Update maximum lead and winner if current lead is greater than max_lead
+        if current_lead > max_lead:
+            max_lead = current_lead
+            winner = leader
+            
+    return winner, max_lead
+
+# Input number of rounds
+n = int(input("Enter the number of rounds: "))
+
+# Input scores for each round
+rounds = []
+for i in range(n):
+    score1, score2 = map(int, input(f"Enter scores for round {i+1}: ").split())
+    rounds.append((score1, score2))
+
+# Determine the winner and the maximum lead
+winner, max_lead = find_winner_and_max_lead(rounds)
+
+# Output the result
+print("Winner:", winner)
+print("Maximum Lead:", max_lead)

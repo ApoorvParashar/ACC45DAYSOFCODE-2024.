@@ -1,0 +1,12 @@
+def is_good_program(N):
+    # Check if N is a multiple of 4
+    if N % 4 == 0:
+        return "Good"
+    else:
+        return "Not Good"
+
+# Input the number of bits
+N = int(input("Enter the memory used by the program in bits: "))
+
+# Output the result
+print(is_good_program(N))

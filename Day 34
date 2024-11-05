@@ -1,0 +1,15 @@
+def find_third_number(A, B):
+    # Calculate the required third number to make the sum 21
+    C = 21 - (A + B)
+    
+    # Check if C is within the valid range [1, 10]
+    if 1 <= C <= 10:
+        return C
+    else:
+        return -1
+
+# Example usage:
+A = int(input("Enter the first number: "))
+B = int(input("Enter the second number: "))
+result = find_third_number(A, B)
+print(result)

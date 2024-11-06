@@ -1,0 +1,9 @@
+def will_chef_qualify(X, A, B):
+    # Calculate total score
+    total_score = A + 2 * B
+    
+    # Check if Chef qualifies
+    if total_score >= X:
+        return "Qualify"
+    else:
+        return "Not Qualify"

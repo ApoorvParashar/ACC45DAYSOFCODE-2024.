@@ -1,0 +1,8 @@
+def count_tuesdays(N):
+    # The first Tuesday from Monday is 1 day away, so we reduce N by 1
+    # and then check how many 7-day intervals fit in the remaining days
+    return (N - 1) // 7 + 1
+
+# Example usage:
+N = int(input("Enter the number of spooky days until Halloween: "))
+print("Dracula can enjoy his favorite Tuesday menu", count_tuesdays(N), "times.")

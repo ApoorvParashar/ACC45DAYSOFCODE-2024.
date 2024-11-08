@@ -1,0 +1,39 @@
+def min_operations_to_zero_sum(arr):
+    # Calculate the initial sum of the array
+    total_sum = sum(arr)
+    
+    # If the sum is already zero, no operations are needed
+    if total_sum == 0:
+        return 0
+    
+    # If the sum is odd, it's impossible to make it zero
+    if total_sum % 2 != 0:
+        return -1
+    
+    # Count occurrences of 1 and -1 in the array
+    count_1 = arr.count(1)
+    count_neg1 = arr.count(-1)
+    
+    # Calculate the target difference to make the sum zero
+    target = abs(total_sum) // 2
+    
+    # Find the minimum number of flips to reach this target
+    # We can either flip 1 to -1 or -1 to 1
+    if total_sum > 0:
+        # If sum is positive, we need to flip some 1s to -1
+        if count_1 >= target:
+            return target
+        else:
+            return -1
+    else:
+        # If sum is negative, we need to flip some -1s to 1
+        if count_neg1 >= target:
+            return target
+        else:
+            return -1
+
+# Example usage:
+N = int(input("Enter the size of the array: "))
+A = list(map(int, input("Enter the array elements (1 and -1 only): ").split()))
+result = min_operations_to_zero_sum(A)
+print("Minimum number of operations required:", result)

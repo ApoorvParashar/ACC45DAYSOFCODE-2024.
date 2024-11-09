@@ -1,0 +1,20 @@
+import math
+
+def binary_battles(N):
+    # Check if N is a power of 2
+    if (N & (N - 1)) != 0:
+        return "N must be a power of 2."
+
+    # Calculate the number of rounds
+    rounds = int(math.log2(N))
+
+    # Calculate the total number of matches
+    matches = N - 1
+
+    return rounds, matches
+
+# Example usage
+N = 16  # Change this value as needed
+rounds, matches = binary_battles(N)
+print(f"Number of rounds: {rounds}")
+print(f"Total matches: {matches}")

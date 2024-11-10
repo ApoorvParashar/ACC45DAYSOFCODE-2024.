@@ -1,0 +1,15 @@
+def is_cyclic_quadrilateral(a, b, c, d):
+    # Check if the sum of opposite angles equals 180 degrees
+    return (a + c == 180) and (b + d == 180)
+
+# Input: angles of the quadrilateral in degrees
+A = int(input("Enter angle A: "))
+B = int(input("Enter angle B: "))
+C = int(input("Enter angle C: "))
+D = int(input("Enter angle D: "))
+
+# Check if the quadrilateral is cyclic
+if is_cyclic_quadrilateral(A, B, C, D):
+    print("The quadrilateral is cyclic.")
+else:
+    print("The quadrilateral is not cyclic.")

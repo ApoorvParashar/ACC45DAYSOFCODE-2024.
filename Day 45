@@ -1,0 +1,10 @@
+def total_watch_time(X, Y):
+    # Calculate the total time Chef will spend watching the movie
+    return X - (Y // 2)
+
+# Example usage:
+X = int(input("Enter the total duration of the movie in minutes (X): "))
+Y = int(input("Enter the duration Chef will watch at twice speed in minutes (Y): "))
+
+# Print the total time spent watching the movie
+print("Total time Chef spends watching the movie:", total_watch_time(X, Y), "minutes")

@@ -1,0 +1,14 @@
+def max_people_can_bath(geyser_capacity, bucket_capacity):
+    # Calculate water required per person
+    water_per_person = 2 * bucket_capacity
+    
+    # Calculate maximum number of people
+    max_people = geyser_capacity // water_per_person
+    
+    return max_people
+
+# Example usage
+X = 100  # Capacity of geyser in litres
+Y = 10   # Capacity of bucket in litres
+result = max_people_can_bath(X, Y)
+print("Maximum number of people that can take bath:", result)

@@ -1,0 +1,14 @@
+def amount_to_pay(A, B, C):
+    # Calculate the minimum price among the three items
+    min_price = min(A, B, C)
+    
+    # Calculate the total price by adding all three items and subtracting the minimum price
+    total_cost = A + B + C - min_price
+    
+    return total_cost
+
+# Example usage:
+A = 6
+B = 2
+C = 4
+print("Amount Chef needs to pay:", amount_to_pay(A, B, C))

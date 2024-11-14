@@ -1,0 +1,15 @@
+def will_chef_pass(N, X, P):
+    # Calculate the total score
+    total_score = (3 * X) - (N - X)
+    
+    # Check if Chef passes or fails
+    if total_score >= P:
+        return "Pass"
+    else:
+        return "Fail"
+
+# Example usage
+N = 10
+X = 7
+P = 15
+print(will_chef_pass(N, X, P))  # Output should be "Pass"

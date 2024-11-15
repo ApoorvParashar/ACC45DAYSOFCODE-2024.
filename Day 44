@@ -1,0 +1,18 @@
+def total_duration(N, A, B):
+    # Number of odd-indexed episodes
+    odd_episodes = (N + 1) // 2
+    
+    # Number of even-indexed episodes
+    even_episodes = N // 2
+    
+    # Total duration
+    total_time = (odd_episodes * B) + (even_episodes * A)
+    
+    return total_time
+
+# Example usage
+N = int(input("Enter the number of episodes: "))
+A = int(input("Enter the duration of even-indexed episodes: "))
+B = int(input("Enter the duration of odd-indexed episodes: "))
+
+print("Total duration of the last season:", total_duration(N, A, B

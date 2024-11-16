@@ -1,0 +1,14 @@
+def minimum_coins(N):
+    # Calculate the number of groups of 5 gifts
+    full_groups = N // 5
+    # Calculate the leftover gifts
+    leftover_gifts = N % 5
+    # Calculate the total coins needed
+    coins = (4 * full_groups) + leftover_gifts
+    return coins
+
+# Input: Number of gifts
+N = int(input("Enter the number of gifts: "))
+
+# Output: Minimum coins required
+print("Minimum coins required:", minimum_coins(N))

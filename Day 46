@@ -1,0 +1,21 @@
+def max_plates(X, Y, R):
+    # Calculate extra sticks eaten
+    extra_sticks = R // 30
+    
+    # Calculate total sticks eaten
+    total_sticks = X + extra_sticks
+    
+    # Calculate the maximum number of plates
+    if total_sticks % Y == 0:
+        max_plates = total_sticks // Y
+    else:
+        max_plates = total_sticks // Y
+    
+    return max_plates
+
+# Example usage
+X = 5  # Minimum threshold of sticks
+Y = 4  # Sticks per plate
+R = 90 # Total rupees Chef earned
+
+print("Maximum number of plates:", max_plates(X,
